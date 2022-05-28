@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
 
-void merge(std::vector<int>& vec, int start, int middle, int end)
+void merge(std::vector<int>& vec, int start, int middle, int end)    //Function for merging the divided arrray
 {
     int leftSize = middle - start + 1;
     int rightSize = end - middle;
@@ -40,7 +40,7 @@ void merge(std::vector<int>& vec, int start, int middle, int end)
     }
 }
 
-void mergeSort(std::vector<int>& vec, int start, int end) {
+void mergeSort(std::vector<int>& vec, int start, int end) {    //Recursive function that divedes the array and calls the <merge> fuction
     int middle = (start + end) / 2;
     if(start < end) {
         mergeSort(vec,start,middle);
