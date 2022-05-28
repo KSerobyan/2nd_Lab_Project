@@ -3,9 +3,9 @@
 
 void merge(std::vector<int>& vec, int start, int middle, int end)    //Function for merging the divided arrray
 {
-    int leftSize = middle - start + 1;
+    int leftSize = middle - start + 1;              //Declaring the sizes of the array
     int rightSize = end - middle;
-    std::vector<int> leftArr(leftSize);
+    std::vector<int> leftArr(leftSize);             //Creating two arrays that will contain the elements of each side
     std::vector<int> rightArr(rightSize);
     for(int i{}; i < leftSize; ++i) {
         leftArr[i] = vec[start + i];
@@ -17,7 +17,7 @@ void merge(std::vector<int>& vec, int start, int middle, int end)    //Function 
     int num1 = 0;
     int num2 = 0;
 
-    for(int k = start; k <= end; ++k) {
+    for(int k = start; k <= end; ++k) {                             //Sorting the arrays
         if(num1 < leftSize && num2 < rightSize)
         {
             if(leftArr[num1] < rightArr[num2]){
